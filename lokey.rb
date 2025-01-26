@@ -5,37 +5,37 @@
 class Lokey < Formula
   desc "A powerful CLI tool for managing Lokey operations"
   homepage "https://github.com/ThywillJoshua/lokey-cli"
-  version "0.16"
+  version "0.17"
 
   depends_on "go"
 
   on_macos do
-    url "https://github.com/ThywillJoshua/lokey-cli/releases/download/v0.16/lokey-cli_0.16_darwin_all.tar.gz"
-    sha256 "7d0abb054c943719cb84616ddcda1cde99c0d33e058cc0ed2a4b14a2ba17f7b6"
+    url "https://github.com/ThywillJoshua/lokey-cli/releases/download/v0.17/lokey-cli_0.17_darwin_all.tar.gz"
+    sha256 "bf5f9b92250140dd70f18edfae440973b82a8786912740a6381b0810dc14c863"
 
     def install
-      bin.install Dir["*"].find { |f| File.basename(f) == "lokey" }
+      bin.install "lokey-cli"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/ThywillJoshua/lokey-cli/releases/download/v0.16/lokey-cli_0.16_linux_amd64.tar.gz"
-        sha256 "c26c9834dec7206efea5cf6dae2b72838e170999be2eabd95712cd8507e30161"
+        url "https://github.com/ThywillJoshua/lokey-cli/releases/download/v0.17/lokey-cli_0.17_linux_amd64.tar.gz"
+        sha256 "e07f7769ce142467715c2d479517ccc003bc847d2a783a5edf6edc85afa9ccc5"
 
         def install
-          bin.install Dir["*"].find { |f| File.basename(f) == "lokey" }
+          bin.install "lokey-cli"
         end
       end
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/ThywillJoshua/lokey-cli/releases/download/v0.16/lokey-cli_0.16_linux_arm64.tar.gz"
-        sha256 "0b550676c10d0d05fe828a7592b433600085e47ccfa1572ca5d3637b4929d0cc"
+        url "https://github.com/ThywillJoshua/lokey-cli/releases/download/v0.17/lokey-cli_0.17_linux_arm64.tar.gz"
+        sha256 "bb4e884bbe91aaa8428b00bde6bbda76c4c5b9d523db4eb428acd4ebbb415b4b"
 
         def install
-          bin.install Dir["*"].find { |f| File.basename(f) == "lokey" }
+          bin.install "lokey-cli"
         end
       end
     end
