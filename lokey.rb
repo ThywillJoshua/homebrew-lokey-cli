@@ -5,13 +5,13 @@
 class Lokey < Formula
   desc "A powerful CLI tool for managing Lokey operations"
   homepage "https://github.com/ThywillJoshua/lokey-cli"
-  version "0.13"
+  version "0.14"
 
   depends_on "go"
 
   on_macos do
-    url "https://github.com/ThywillJoshua/lokey-cli/releases/download/v0.13/lokey-cli_0.13_darwin_all.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-    sha256 "d50dc299fa04b5aca0ea07fe492950f3843e2025a7126fa4f3c942ec969e68fb"
+    url "https://github.com/ThywillJoshua/lokey-cli/releases/download/v0.14/lokey-cli_0.14_darwin_all.tar.gz"
+    sha256 "eb1f0c68fac6db7060bd2bb2a63c8e77e9e9fdfabb1316e2d30deb3a37668cf1"
 
     def install
       bin.install "lokey"
@@ -21,8 +21,8 @@ class Lokey < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/ThywillJoshua/lokey-cli/releases/download/v0.13/lokey-cli_0.13_linux_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-        sha256 "106593780a1dd9fa1136d6a86d6b4cfae3e05b3d187bc7db57c3deabadc8d16c"
+        url "https://github.com/ThywillJoshua/lokey-cli/releases/download/v0.14/lokey-cli_0.14_linux_amd64.tar.gz"
+        sha256 "e4bf313383cfd23fb2b2318d248792319520481f2316ebda2363a671327b26ab"
 
         def install
           bin.install "lokey"
@@ -31,8 +31,8 @@ class Lokey < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/ThywillJoshua/lokey-cli/releases/download/v0.13/lokey-cli_0.13_linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-        sha256 "74b0001a84d0b6108438d02560e51aa8496f52a6de0881a574eedb17649cb6f2"
+        url "https://github.com/ThywillJoshua/lokey-cli/releases/download/v0.14/lokey-cli_0.14_linux_arm64.tar.gz"
+        sha256 "e387d84021987f75232b9fb2da2495f20f551d88969f0c905f71d22e9ce3b410"
 
         def install
           bin.install "lokey"
