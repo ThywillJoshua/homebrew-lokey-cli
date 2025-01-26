@@ -5,13 +5,13 @@
 class Lokey < Formula
   desc "A powerful CLI tool for managing Lokey operations"
   homepage "https://github.com/ThywillJoshua/lokey-cli"
-  version "0.12"
+  version "0.13"
 
   depends_on "go"
 
   on_macos do
-    url "https://github.com/ThywillJoshua/lokey-cli/releases/download/v0.12/lokey-cli_0.12_darwin_all.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-    sha256 "ad618aef480bf7ae27560b3e84bb318a7ac8a04525f86caab765cd3ebc1610ed"
+    url "https://github.com/ThywillJoshua/lokey-cli/releases/download/v0.13/lokey-cli_0.13_darwin_all.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+    sha256 "d50dc299fa04b5aca0ea07fe492950f3843e2025a7126fa4f3c942ec969e68fb"
 
     def install
       bin.install "lokey"
@@ -21,8 +21,8 @@ class Lokey < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/ThywillJoshua/lokey-cli/releases/download/v0.12/lokey-cli_0.12_linux_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-        sha256 "0f2784bf47c7fb6d5c92c1eef1a453a08cd1e377edb32f9acbd920e7b95da42d"
+        url "https://github.com/ThywillJoshua/lokey-cli/releases/download/v0.13/lokey-cli_0.13_linux_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+        sha256 "106593780a1dd9fa1136d6a86d6b4cfae3e05b3d187bc7db57c3deabadc8d16c"
 
         def install
           bin.install "lokey"
@@ -31,8 +31,8 @@ class Lokey < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/ThywillJoshua/lokey-cli/releases/download/v0.12/lokey-cli_0.12_linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-        sha256 "336613a7eeec3175b7762b9f982259731a6267544b4749bed6270db456e94e36"
+        url "https://github.com/ThywillJoshua/lokey-cli/releases/download/v0.13/lokey-cli_0.13_linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+        sha256 "74b0001a84d0b6108438d02560e51aa8496f52a6de0881a574eedb17649cb6f2"
 
         def install
           bin.install "lokey"
